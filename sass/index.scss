@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+%link-style {
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 18px;
+	color: #101010;
+}
+
+%footerLink-style {
+	font-weight: 400;
+	font-size: 17px;
+	line-height: 21px;
+	color: #101010;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+}
+a {
+	text-decoration: none;
+}
+body {
+	max-width: 1100px;
+	margin: 0 auto;
+	background: #eaeaea;
+}
+
+.header {
+	display: inline-grid;
+	width: 1110px;
+	grid-template-rows: 60px;
+	grid-template-columns: 0.5fr 1fr 1fr;
+	align-items: center;
+}
+.logo {
+	font-weight: 700;
+	font-size: 25px;
+	line-height: 30px;
+}
+.headerLogo {
+}
+.selectProduct {
+	display: flex;
+	position: relative;
+	a {
+		@extend %link-style;
+	}
+
+	&__phone {
+		display: inline-block;
+		margin-right: 14%;
+		svg {
+			position: absolute;
+			left: -25px;
+		}
+	}
+
+	&__headphone {
+		svg path {
+			fill: #838383;
+		}
+		svg {
+			position: absolute;
+			left: 115px;
+			top: -3px;
+		}
+	}
+}
+.userMenu {
+	position: relative;
+	display: flex;
+	justify-content: end;
+
+	&__like {
+		margin: 3px 10% auto auto;
+	}
+
+	&__like-counter {
+		@extend %link-style;
+		color: #eaeaea;
+		position: absolute;
+		background: #ffa542;
+		width: 19px;
+		height: 19px;
+		border-radius: 50%;
+		top: -6px;
+		right: 58px;
+		text-align: center;
+	}
+
+	&__cart {
+	}
+
+	&__cart-counter {
+		@extend %link-style;
+		color: #eaeaea;
+		position: absolute;
+		background: #ffa542;
+		min-width: 19px;
+		min-height: 19px;
+		border-radius: 50%;
+		top: -6px;
+		right: -10px;
+		text-align: center;
+	}
+}
+.bannerWrapper {
+	margin-top: 22px;
+}
+.banner {
+	position: relative;
+	width: 1110px;
+	height: 197px;
+	background: #101010;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+	border-radius: 30px;
+
+	overflow: hidden;
+	img {
+		position: absolute;
+		right: 87px;
+		bottom: -20px;
+	}
+	h1 {
+		font-weight: 600;
+		font-size: 30px;
+		line-height: 37px;
+		text-align: center;
+		color: white;
+		width: 643px;
+		height: 74px;
+		margin: 58px auto auto 50px;
+	}
+}
+.productListWrapper {
+	margin: 30px auto 30px auto;
+}
+.productList {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 24px;
+	color: #838383;
+	align-items: center;
+
+	&__select {
+	}
+
+	&__items {
+		svg {
+			width: 24px;
+			height: 24px;
+			margin-left: 10px;
+		}
+	}
+}
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 350px);
+	gap: 25px 25px;
+}
+.productCard {
+	width: 350px;
+	height: 430px;
+	background: #ffffff;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+	border-radius: 30px;
+	padding: 15px 22px;
+
+	&__like {
+	}
+
+	&__img {
+		text-align: center;
+		width: 300px;
+		height: 290px;
+	}
+
+	&__titlt {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-top: 16px;
+		h3 {
+			font-style: normal;
+			display: inline-block;
+			margin: 0;
+			font-weight: 600;
+			font-size: 17px;
+		}
+	}
+
+	&__price {
+		font-weight: 600;
+		font-size: 17px;
+		line-height: 21px;
+		color: #ffa542;
+	}
+
+	&__raiting {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		margin-top: 16px;
+	}
+
+	&__ratingStar {
+	}
+
+	&__ratingNam {
+		margin: 3px auto auto 10px;
+	}
+}
+.footerWrapper {
+	margin-top: 40px;
+}
+
+.footer {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	width: 1100px;
+	height: 149px;
+	background: #ffffff;
+	box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+	border-radius: 30px 30px 0px 0px;
+	padding: 22px;
+
+	a {
+		@extend %footerLink-style;
+	}
+	&__Logo {
+		margin: 10px 20px;
+	}
+
+	&__Nav {
+		display: flex;
+		flex-direction: column;
+		a {
+			margin-top: 10px;
+		}
+	}
+
+	&__LengBlock {
+		margin-top: 10px;
+	}
+
+	&__title {
+	}
+
+	&__lang {
+		margin-top: 33px;
+	}
+
+	&__Links {
+		margin-top: 20px;
+	}
+}
+.logo {
+}
+.langSelect {
+	display: flex;
+	flex-direction: row;
+	&_rus {
+		margin-left: 15px;
+	}
+
+	&_eng {
+		margin-left: 15px;
+	}
+}
+.link > a {
+	margin-left: 18px;
+}
